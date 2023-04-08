@@ -3,10 +3,10 @@
 /**
  * main - sum of all multiples of 3 or 5 below 1024 (excl.)
  *
- * Return: void
+ * Return: Always (0)
  */
 
-void main(void)
+int main(void)
 {
 	int n, sum = 0;
 
@@ -18,4 +18,6 @@ void main(void)
 		}
 	}
 	printf("%d\n", sum);
+
+	return (0);
 }
