@@ -13,19 +13,18 @@ void times_table(void)
 
 	for (x = 0; x <= 9; x++)
 	{
-		for (y = 0; y <= 9; y++)
+		_putchar(48);
+		for (y = 1; y <= 9; y++)
 		{
 			r = x * y;
-			if (r == 0)
-				_putchar(48);
-			else if ((r > 0) && (r <= 9))
+			if ((r >= 0) && (r <= 9))
 			{
 				_putchar(44);
 				_putchar(32);
 				_putchar(32);
 				_putchar(48 + r);
 			}
-			else
+			else if (r >= 10)
 			{
 				_putchar(44);
 				_putchar(32);
