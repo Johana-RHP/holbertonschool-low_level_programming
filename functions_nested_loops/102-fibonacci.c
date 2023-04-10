@@ -8,18 +8,18 @@
 
 int main(void)
 {
-	int i, r;
-	int a = 1, b = 2;
+	int i;
+	long int a = 1, b = 2, r;
 
 	printf("%d, %d, ", a, b);
 	for (i = 1; i <= 48; i++)
 	{
 		r = a + b;
 		if (i == 48)
-			printf("%d\n", r);
+			printf("%ld\n", r);
 		else
 		{
-			printf("%d, ", r);
+			printf("%ld, ", r);
 			a = b;
 			b = r;
 		}
