@@ -11,7 +11,7 @@ int main(void)
 	int i;
 	long int a = 1, b = 2, r;
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	for (i = 1; i <= 48; i++)
 	{
 		r = a + b;
