@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * _strlen - calculates the length of the string
+ * @s: string
+ *
+ * Return: chain length
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		;
+	}
+
+	return (i);
+}
+
+/**
  * puts2 - prints string skipping one character
  * @str: string
  *
@@ -9,9 +28,10 @@
 
 void puts2(char *str)
 {
-	int i;
+	int i, len;
 
-	for (i = 0; str[i] != '\0'; i = i + 2)
+	len = _strlen(str);
+	for (i = 0; i < len; i = i + 2)
 	{
 		_putchar(str[i]);
 	}
