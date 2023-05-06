@@ -5,7 +5,6 @@
  * @n: contante int
  * Return: el valor de reterno
  */
-
 char *leet(char *s)
 {
 	char upp[] = {'A', 'E', 'O', 'T', 'L'};

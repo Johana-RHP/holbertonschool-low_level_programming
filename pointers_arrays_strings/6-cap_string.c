@@ -4,32 +4,33 @@
  * @n: puntero
  * Return: n
  */
-
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	char *tmp = str;
+	int i;
 
-	int capitalize_next = 1;
-
-	while (*tmp != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (capitalize_next && (*tmp >= 'a' && *tmp <= 'z'))
+		if (s[i] >= 97 && s[i] <= 122)
 		{
-			*tmp = *tmp - 32;
+			if (i == 0)
+				s[i] = s[i] - 32;
+			if (s[i - 1] == 32 || s[i - 1] == 9 || s[i - 1] == 10 || s[i - 1] == 44)
+			{
+				s[i] = s[i] - 32;
+			}
+			else if (s[i - 1] == 59 || s[i - 1] == 46 || s[i - 1] == 33)
+			{
+				s[i] = s[i] - 32;
+			}
+			else if (s[i - 1] == 63 || s[i - 1] == 34 || s[i - 1] == 40)
+			{
+				s[i] = s[i] - 32;
+			}
+			else if (s[i - 1] == 41 || s[i - 1] == 123 || s[i - 1] == 125)
+			{
+				s[i] = s[i] - 32;
+			}
 		}
-		if (*tmp == ' ' || *tmp == '\t' || *tmp == '\n' ||
-			*tmp == ',' || *tmp == ';' || *tmp == '.' ||
-			*tmp == '|' || *tmp == '?' || *tmp == '"' ||
-			*tmp == '(' || *tmp == ')' || *tmp == '{' || *tmp == '}')
-		{
-			capitalize_next = 1;
-		}
-		else
-		{
-			capitalize_next = 0;
-		}
-
-		tmp++;
 	}
-	return (str);
+	return (s);
 }
